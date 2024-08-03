@@ -13,7 +13,7 @@ function InputBox({
 }) {
     const amountInputId = useId();
     return (
-        <div style={{ marginBottom: margin }} className={`bg-white border-[#00000095] border flex rounded-xl p-4 w-full`}>
+        <div style={{ marginBottom: margin }} className={`bg-white flex rounded-xl p-4 w-full`}>
             <div className="w-1/2 flex flex-col justify-between">
                 <label htmlFor={amountInputId} className="text-black/40 mb-2 text-xs transition-all md:text-lg inline-block">{lable}</label>
                 <input step="any" id={amountInputId} type="number" className="placeholder:text-black text-xl bg-white outline-0" placeholder="0" disabled={amountDisable} value={amount} onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}/>

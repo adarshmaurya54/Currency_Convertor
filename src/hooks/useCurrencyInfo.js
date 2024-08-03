@@ -5,8 +5,6 @@ function useCurrencyInfo(Currency){
     useEffect(() => {
         fetch(`https://open.er-api.com/v6/latest/${Currency}`).then((res) => res.json()).then((res) => setDate(res['rates']))
     }, [Currency])
-    console.log(data);
-    
     return data;
 }
 

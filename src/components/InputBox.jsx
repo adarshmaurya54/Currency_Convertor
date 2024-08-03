@@ -1,6 +1,6 @@
 function InputBox({ lable, margin="0px" }) {
     return (
-        <div style={{marginBottom: margin}} className={`bg-white flex rounded-xl p-4 w-full`}>
+        <div style={{marginBottom: margin}} className={`bg-white border-[#00000095] border flex rounded-xl p-4 w-full`}>
             <div className="w-1/2 flex flex-col justify-between">
                 <p className="text-black/40 mb-2">{lable}</p>
                 <input type="text" className="placeholder:text-black outline-0" placeholder="0" id="" />

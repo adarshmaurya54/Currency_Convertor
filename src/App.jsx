@@ -7,7 +7,7 @@ import InputBox from "./components/InputBox";
 function App() {
   return (
     <div style={{ backgroundImage: `url(${bg})` }} className="bg-no-repeat bg-center bg-cover w-full h-screen flex justify-center items-center">
-      <div className="bg-[#ffffff58] backdrop-blur-md border-2 border-[#ffffff70] md:w-[600px] rounded-xl p-4">
+      <div className="bg-[#ffffff30] backdrop-blur-md border-2 transition-all w-[350px] border-[#ffffff70] md:w-[600px] rounded-xl p-4">
         <div className="relative">
           <InputBox lable="From" margin="10px" />
           <InputBox lable="To" margin="20px" />

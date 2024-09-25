@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useId, useRef } from "react";
 
 function InputBox({
     lable,
@@ -12,11 +12,16 @@ function InputBox({
     margin = "0px"
 }) {
     const amountInputId = useId();
+    const inputRef = useRef();
+
+    const selectInput = () => {
+        inputRef.current.select();
+    }
     return (
         <div style={{ marginBottom: margin }} className={`bg-white flex rounded-xl p-4 w-full`}>
             <div className="w-1/2 flex flex-col justify-between">
                 <label htmlFor={amountInputId} className="text-black/40 mb-2 text-xs transition-all md:text-lg inline-block">{lable}</label>
-                <input step="any" id={amountInputId} type="number" className="placeholder:text-black text-xl bg-white outline-0" placeholder="0" disabled={amountDisable} value={amount} onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}/>
+                <input ref={inputRef} onFocus={selectInput} step="any" id={amountInputId} type="number" className="placeholder:text-black text-xl bg-white outline-0" placeholder="0" disabled={amountDisable} value={amount} onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}/>
             </div>
             <div className="w-1/2 text-right">
                 <p className="text-black/40 mb-2 text-xs transition-all md:text-lg">Currency Type</p>
